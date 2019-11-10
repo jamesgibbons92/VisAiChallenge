@@ -1,0 +1,6 @@
+[
+    { "username": "" , "password": "", "isLoggedIn": false, "errorMessage": "Both Username and Password must be present"},
+    { "username": "" , "password": "Doe", "isLoggedIn": false, "errorMessage": "Username must be present"},
+    { "username": "John" , "password": "", "isLoggedIn": false, "errorMessage": "Password must be present"},
+    { "username": "John" , "password": "Doe", "isLoggedIn": true, "errorMessage": null}
+]
