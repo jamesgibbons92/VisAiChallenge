@@ -7,9 +7,9 @@ const loginForm = {
     errorText: '.alert-warning'
 }
 
-context('Hackathon V1', () => {
+context('Hackathon', () => {
     beforeEach(() => {
-        cy.visit("https://demo.applitools.com/hackathon.html")
+        cy.visit(Cypress.config("baseUrl"))
         cy.viewport(1800, 1000)
         cy.fixture('login').as('login')
     })
@@ -147,7 +147,7 @@ context('Hackathon V1', () => {
     })
     describe('Dynamic content test', () => {
         beforeEach(() => {
-            cy.visit('https://demo.applitools.com/hackathon.html?showAd=true')
+            cy.visit('/?showAd=true')
             cy.get(loginForm.unInput)
                 .type("Bruce")
             cy.get(loginForm.pwInput)
